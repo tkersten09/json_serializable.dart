@@ -109,9 +109,7 @@ abstract class EncodeHelper implements HelperCore {
             // fields
             ..writeln('''
     void $toJsonMapHelperName(String key, dynamic value) {
-      if (value != null) {
-        $generatedLocalVarName[key] = value;
-      }
+        $generatedLocalVarName[key] = value ?? FieldValue.delete();
     }
 ''');
           directWrite = false;
